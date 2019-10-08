@@ -12,6 +12,7 @@ gem 'jbuilder',     '2.7.0'
 group :development, :test do
   gem 'mysql2', '>= 0.3.18', '< 0.6.0'
   gem 'byebug',  '9.0.6', platform: :mri
+  gem 'guard-rspec', require: false
 end
 
 group :development do
