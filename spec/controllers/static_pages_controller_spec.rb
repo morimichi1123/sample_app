@@ -10,7 +10,8 @@ RSpec.describe "multi_access", type: :request do
     get root_path
     expect(response.status).to eq 200
     assert_select "title", "Ruby on Rails Tutorial Sample App"
-    
+ #  assert_select "a[href=?]", root_path, count: 2
+
     get help_path
     expect(response.status).to eq 200
     assert_select "title", "Help | Ruby on Rails Tutorial Sample App"
@@ -18,6 +19,7 @@ RSpec.describe "multi_access", type: :request do
     get about_path
     expect(response.status).to eq 200
     assert_select "title", "About | Ruby on Rails Tutorial Sample App"
+ #  assert_select "a[href=?]", about_path
 
     get contact_path
     expect(response.status).to eq 200
