@@ -43,7 +43,7 @@ class User < ApplicationRecord
 
   # アカウントを有効にする（11）
   def activate
-    update_columns(activated: FILL_IN, activated_at: FILL_IN)
+    update_columns(activated: true, activated_at: Time.zone.now)
   end
 
   # 有効化用のメールを送信する(11)
@@ -57,7 +57,7 @@ private
     self.email = email.downcase
   end
 
-  # 有効化トークンとダイジェストを作成および代入する
+  # 有効化トークンとダイジェストを作成および代入する(11)
   def create_activation_digest
     self.activation_token  = User.new_token
     self.activation_digest = User.digest(activation_token)
