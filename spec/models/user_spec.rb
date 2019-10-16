@@ -58,7 +58,7 @@ RSpec.describe User, type: :model do
       duplicate_user = @user.dup
       duplicate_user.email = @user.email.upcase
       #ここ↓
-      @user.save
+      @user.save!
       expect(duplicate_user).to be_invalid
     end
 end
