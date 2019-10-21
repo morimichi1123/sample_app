@@ -1,0 +1,15 @@
+current directory: /home/vagrant/environment/sample_app/vendor/bundle/ruby/2.4.0/gems/therubyracer-0.12.3/ext/v8
+/home/vagrant/.rbenv/versions/2.4.4/bin/ruby -r ./siteconf20191021-7793-1z96j4.rb extconf.rb
+checking for -lpthread... yes
+creating Makefile
+
+current directory: /home/vagrant/environment/sample_app/vendor/bundle/ruby/2.4.0/gems/therubyracer-0.12.3/ext/v8
+make "DESTDIR=" clean
+
+current directory: /home/vagrant/environment/sample_app/vendor/bundle/ruby/2.4.0/gems/therubyracer-0.12.3/ext/v8
+make "DESTDIR="
+compiling accessor.cc
+make: g++: Command not found
+make: *** [accessor.o] Error 127
+
+make failed, exit code 2
